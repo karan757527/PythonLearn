@@ -1,12 +1,39 @@
-five = (1, 2, 3, 4, 5)
-print("five[0] : ", five[0])
-print("five[-1] : ", five[-1])
-print("five[-2] : ", five[-2])
-print("five[:] : ", five[:])
-print("five[0:4] : ", five[0:4])
-print("five[1:2] : ", five[1:2])
-print("five[:2] : ", five[:2])
-print("five[:-1] : ", five[:-1])
-print("five[:9] : ", five[:9])
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
-print(five[1:3])
+"""
+ZetCode Tkinter tutorial
+
+This script shows a simple window
+on the screen.
+
+Author: Jan Bodnar
+Last modified: July 2017
+Website: www.zetcode.com
+"""
+
+from tkinter import Tk, BOTH
+from tkinter.ttk import Frame
+
+
+class Example(Frame):
+
+    def __init__(self):
+        super().__init__()
+
+        self.initUI()
+
+    def initUI(self):
+        self.master.title("Simple")
+        self.pack(fill=BOTH, expand=1)
+
+
+def main():
+    root = Tk()
+    root.geometry("250x150+300+300")
+    app = Example()
+    root.mainloop()
+
+
+if __name__ == '__main__':
+    main()
